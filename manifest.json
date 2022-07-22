@@ -1,0 +1,46 @@
+{
+  "name": "Screenshot",
+  "description": "You can take screenshot with just shortcuts",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "downloads", "notifications"],
+  "commands": {
+    "take-screenshot": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "take a screenshot to write clipboard"
+    },
+    "save-screenshot": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Alt+Shift+S"
+      },
+      "description": "save a screenshot to your download folder"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/images/camera.png",
+      "32": "/images/camera.png",
+      "48": "/images/camera.png",
+      "128": "/images/camera.png"
+    }
+  },
+  "icons": {
+    "16": "/images/camera.png",
+    "32": "/images/camera.png",
+    "48": "/images/camera.png",
+    "128": "/images/camera.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
