@@ -1,4 +1,4 @@
-const directory = "screenshots";
+const directory = "chrome-screenshot";
 const format = "png";
 
 chrome.runtime.onMessage.addListener((message) => {
