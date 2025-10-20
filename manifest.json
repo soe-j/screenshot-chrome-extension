@@ -4,6 +4,7 @@
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["activeTab", "downloads", "notifications"],
+  "host_permissions": ["<all_urls>"],
   "commands": {
     "take-screenshot": {
       "suggested_key": {
